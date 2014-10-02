@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe NewsController, :type => :controller do
+RSpec.describe ReviewsController, :type => :controller do
 
   describe "GET index" do
     it "returns http success" do

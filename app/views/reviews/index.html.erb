@@ -1,0 +1,30 @@
+<% title 'Review Listing'  %>
+
+<table role="grid" style="margin-top: 50px;">
+  <caption><b>Review List</b></caption>
+  <tbody>
+
+  <%
+     @reviews['results'].each do |review|
+     url =  review['multimedia'].nil? ? '/assets/avatar.jpg' : review['multimedia']['resource']['src']
+  %>
+    <tr>
+      <td>
+        <%= image_tag("#{url}", height: '100', width: '100') %>
+      </td>
+      <td>
+        <b><%= review['display_title'] %></b><br />
+
+        <b>Headline:</b><br />
+        <%= review['headline'].html_safe %> <br />
+
+        <b>Short Summary:</b><br />
+          <%= review['summary_short'].html_safe %> <br />
+
+        <b>Opening Date: </b><br />
+          <%= review['opening_date'] %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

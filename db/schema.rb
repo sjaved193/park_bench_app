@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002073005) do
+ActiveRecord::Schema.define(version: 20141002074309) do
 
-  create_table "news", force: true do |t|
+  create_table "review", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,4 @@
 ParkBenchApp::Application.routes.draw do
-  get "news/index"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,7 +6,7 @@ ParkBenchApp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  root to: "news#index"
+  root to: "reviews#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

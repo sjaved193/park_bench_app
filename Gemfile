@@ -28,6 +28,8 @@ gem 'devise'
 gem 'compass'
 gem 'zurb-foundation'
 
+gem 'httparty'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
