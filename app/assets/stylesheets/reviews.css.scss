@@ -1,3 +1,61 @@
 // Place all the styles related to the News controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.review_row{
+  border: 1px silver;
+}
+.title{
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+  text-decoration: underline;
+  padding: 0 0 14px 88px;
+}
+.headline{
+  color: #2284a1;
+  font-variant: small-caps;
+  font-weight: 600;
+  padding: 0 0 14px 88px;
+}
+.summary{
+  border: 2px solid;
+  font-family: Tahoma;
+  height: 182px;
+  margin: 0 90px 55px 87px;
+  padding: 35px;
+}
+.summary span{
+  padding-right: 15px;
+  font-weight: bold;
+}
+.opening_date{
+  margin-top: -32px;
+  padding-bottom: 22px;
+  text-align: right;
+  font-weight: bold;
+  color: green;
+}
+.article{
+  font-size: 12px;
+  padding-top: 22px;
+}
+.article span{
+  font-style: italic;
+}
+
+img{
+  vertical-align: top;
+}
+table tr.even, table tr.alt, table tr:nth-of-type(2n) {
+  background: none repeat scroll 0 0 #eaeaea;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 36px !important;
+}
+
+table tr td:first-child {
+  width: 150px !important;
+  text-align: center;
+}

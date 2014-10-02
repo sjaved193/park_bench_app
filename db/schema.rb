@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002074309) do
+ActiveRecord::Schema.define(version: 20141002110431) do
 
-  create_table "review", force: true do |t|
+  create_table "reviews", force: true do |t|
+    t.string   "display_title"
+    t.string   "headline"
+    t.text     "summary_short"
+    t.string   "suggested_link_text"
+    t.string   "suggested_link_text_url"
+    t.string   "image_url"
+    t.datetime "opening_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

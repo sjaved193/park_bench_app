@@ -1,28 +1,52 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Park Bench Acquisition
+=========
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Problem Statement
+----
+
+FUNCTIONAL REQUIREMENTS
+
+The main requirement of this project is to consume data from a web based API, then display it in an interesting manner. Here are some examples of interesting web based APIs:
+
+    • HackerNews API: http://api.ihackernews.com/
+    • Github API: http://developer.github.com/v3/
+    • Reddit: http://www.reddit.com/dev/api
+    • Punch Fork Recipe API: http://punchfork.com/api
+
+These are merely a few examples and by no means the only APIs for the project. Find an API that suits your interest to keep this project fun.
+
+TECHNICAL REQUIREMENTS
+
+Specific technology areas we'd like to see are:
+
+    • Ruby on Rails
+
+    • Authentication, e.g., Devise
+
+    • Paging, e.g., will_paginate
+
+    • User Interface, e.g., Bootstrap
+
+    • Unit tests, e.g., RSpec
+
+Solution
+----
+
+Used gems
+
+    • devise
+    • will_paginate
+    • http_party
+    • rspec_rails
+    • factory_girl_rails
+    • figaro
+    • vcr
+    • webmock
+    • foundation
+
+
+* I have used http_party for API call and stored the response inside the database.
+* Used pagination gem for pagination.
+* I have used test driven development. All tests are done using rspec.
+

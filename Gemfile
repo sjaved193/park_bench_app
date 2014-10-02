@@ -29,12 +29,16 @@ gem 'compass'
 gem 'zurb-foundation'
 
 gem 'httparty'
+gem 'will_paginate', '~> 3.0'
+gem "figaro"
 
-group :development, :test do
+group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do

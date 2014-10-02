@@ -1,30 +1,41 @@
 <% title 'Review Listing'  %>
+<h1>Review List</h1>
 
-<table role="grid" style="margin-top: 50px;">
-  <caption><b>Review List</b></caption>
+<%= will_paginate @reviews %>
+<table role="grid">
   <tbody>
 
-  <%
-     @reviews['results'].each do |review|
-     url =  review['multimedia'].nil? ? '/assets/avatar.jpg' : review['multimedia']['resource']['src']
-  %>
-    <tr>
+  <% @reviews.each do |review| %>
+    <tr class="review_row">
       <td>
-        <%= image_tag("#{url}", height: '100', width: '100') %>
+        <%= image_tag("#{review.image_url}", height: '100', width: '100') %>
       </td>
       <td>
-        <b><%= review['display_title'] %></b><br />
+        <div class="title">
+          <%= review.display_title %>
+        </div>
 
-        <b>Headline:</b><br />
-        <%= review['headline'].html_safe %> <br />
+        <div class="headline">
+          <span> Headline: </span>
+          <%= review.headline.html_safe %>
+        </div>
 
-        <b>Short Summary:</b><br />
-          <%= review['summary_short'].html_safe %> <br />
+        <div class="summary">
+          <div class="opening_date">
+            <span> Opening Date: </span>
+            <%= review.opening_date.present? ? review.opening_date.strftime('%d-%m-%Y') : '' %>
+          </div>
+          <span> Short Summary: </span>
+          <%= review.summary_short.html_safe %>
 
-        <b>Opening Date: </b><br />
-          <%= review['opening_date'] %>
+          <div class="article">
+            <span> <%= review.suggested_link_text.html_safe %>: </span>
+            <%= link_to "#{review.suggested_link_text_url}", "#{review.suggested_link_text_url}", target: '_blank' %>
+          </div>
+        </div>
       </td>
     </tr>
   <% end %>
   </tbody>
 </table>
+<%= will_paginate @reviews %>
